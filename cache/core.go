@@ -9,7 +9,7 @@ import (
 
 // Cache represents a player cache
 type Cache struct {
-	apiClient *mojango.Client
+	apiClient mojango.Mojango
 	lifetime time.Duration
 	uuids *timedmap.TimedMap
 	names *timedmap.TimedMap
