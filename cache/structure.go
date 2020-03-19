@@ -10,16 +10,18 @@ import (
 // Cache represents a player cache
 type Cache struct {
 	apiClient *mojango.Client
+	lifetime time.Duration
 	uuids *timedmap.TimedMap
 	names *timedmap.TimedMap
 }
 
 // New creates a new player cache
-func New() *Cache  {
+func New(lifetime, interval time.Duration) *Cache  {
 	return &Cache{
 		apiClient: mojango.New(),
-		uuids: timedmap.New(1 * time.Minute),
-		names: timedmap.New(1 * time.Minute),
+		lifetime: lifetime,
+		uuids: timedmap.New(interval),
+		names: timedmap.New(interval),
 	}
 }
 
@@ -37,7 +39,7 @@ func (cache *Cache) GetUUID(name string) (string, error) {
 	}
 
 	// Put the new value inside the cache and return it
-	cache.uuids.Set(name, uuid, 15 * time.Minute)
+	cache.uuids.Set(name, uuid, cache.lifetime)
 	return uuid, nil
 }
 
@@ -55,7 +57,7 @@ func (cache *Cache) GetName(uuid string) (string, error) {
 	name := profile.Name
 
 	// Put the new value inside the cache and return it
-	cache.names.Set(uuid, name, 15 * time.Minute)
+	cache.names.Set(uuid, name, cache.lifetime)
 	return name, nil
 }
 
