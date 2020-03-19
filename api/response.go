@@ -10,8 +10,8 @@ var errUnauthorized = errors.New("invalid API key")
 
 // Response represents an API response
 type Response struct {
-	Type string
-	Value string
+	Type string `json:"type"`
+	Value string `json:"value"`
 }
 
 // errorResponse returns a marshalled error response
