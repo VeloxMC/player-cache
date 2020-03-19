@@ -32,5 +32,5 @@ func main() {
 	cacheInstance := cache.New(15 * time.Minute, 1 * time.Minute)
 
 	// Serve the REST API
-	go api.Serve(*apiAddress, cacheInstance, apiKeys)
+	api.Serve(*apiAddress, cacheInstance, apiKeys)
 }

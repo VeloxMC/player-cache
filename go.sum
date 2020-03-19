@@ -1,5 +1,5 @@
-github.com/Lukaesebrot/mojango v0.0.0-20200319213937-f2c8bfc0d1c5 h1:mJVX68Py7j1wPtkri0D+j5Y3JK5VpJVkLqOvplN7D7g=
-github.com/Lukaesebrot/mojango v0.0.0-20200319213937-f2c8bfc0d1c5/go.mod h1:LW35h/tXq0VwaaDmPs28FY4Qqv7JVc+65m6ubCfiRFQ=
+github.com/Lukaesebrot/mojango v0.0.0-20200319220953-20c4f93a76c6 h1:dmqBc+p3BvoMHaY74N9maDFwEGm6sgYbwy43SHoeQbU=
+github.com/Lukaesebrot/mojango v0.0.0-20200319220953-20c4f93a76c6/go.mod h1:LW35h/tXq0VwaaDmPs28FY4Qqv7JVc+65m6ubCfiRFQ=
 github.com/fasthttp/router v0.7.0 h1:k2ZhnUNPr7CLXSwDSNvkuOtH4vSijR1Kjjxh0gYzWVQ=
 github.com/fasthttp/router v0.7.0/go.mod h1:00BQmm3xiThNypescxIQ+Gfgw2I/3QWKvuagFoENUb4=
 github.com/klauspost/compress v1.8.2 h1:Bx0qjetmNjdFXASH02NSAREKpiaDwkO1DRZ3dV2KCcs=
