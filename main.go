@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"flag"
 	"github.com/VeloxMC/player-cache/api"
 	"github.com/VeloxMC/player-cache/cache"
 	"io/ioutil"
@@ -11,10 +10,6 @@ import (
 )
 
 func main() {
-	// Parse the command line flags
-	apiAddress := flag.String("apiAddress", ":3030", "The address of the REST API")
-	flag.Parse()
-
 	// Read the API keys out of the corresponding file
 	file, err := os.Open("keys.json"); if err != nil {
 		panic(err)
@@ -32,5 +27,5 @@ func main() {
 	cacheInstance := cache.New(15 * time.Minute, 1 * time.Minute)
 
 	// Serve the REST API
-	api.Serve(*apiAddress, cacheInstance, apiKeys)
+	api.Serve(":8080", cacheInstance, apiKeys)
 }
