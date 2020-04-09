@@ -2,7 +2,7 @@
 A REST API that provides Minecraft player identification endpoints without a rate limit by caching the Mojang API
 
 ## Deployment
-The auto-built docker image is named `veloxmcnet/player-cache`. You can look at the `docker-compose.yml` for a possible
+The auto-built docker image is named `ksebrt/velox-player-cache`. You can look at the `docker-compose.yml` for a possible
 implementation.
 
 ## API keys
