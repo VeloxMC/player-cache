@@ -2,7 +2,7 @@ version: '3'
 
 services:
   player-cache:
-    image: veloxmcnet/player-cache
+    image: ksebrt/velox-player-cache
     container_name: player-cache
     ports:
       - 8080:8080
